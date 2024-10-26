@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; /* Remove default body margin */
+}
+
+.container {
+  display: flex;
+  min-height: 100vh; /* Ensures the container takes the full height */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f0f2f5; /* Adjust the color to match your design */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements on smaller screens */
+  }
+}
