@@ -19,7 +19,7 @@ const Sidebar = () => {
             <FaHome className="mr-3 text-xl" /> Overview
           </div>
         </Link>
-        <Link href="/departments">
+        <Link href="/screens/Departments">
           <div className={`flex items-center p-2 my-2 transition-colors duration-200 border-transparent ${pathname === "/departments" ? "bg-Primary" : ""} hover:bg-Primary hover:rounded-lg hover:border-2 hover:border-Primary rounded`}>
             <FaBuilding className="mr-3 text-xl" /> Departments
           </div>

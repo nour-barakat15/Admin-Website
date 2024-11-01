@@ -2,6 +2,6 @@
 import { redirect } from 'next/navigation';
 
 export default function Home() {
-  redirect('/screens/login');
+  redirect('/screens/Departments');
   return null;
 }
