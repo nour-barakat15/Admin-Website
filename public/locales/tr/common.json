@@ -27,5 +27,10 @@
     "requests": "Talepler",
     "users": "Kullanıcılar",
     "appointments": "Randevular",
-    "tenderNews": "İhale Haberleri"
+    "tenderNews": "İhale Haberleri",
+    "edit": "Düzenle",
+    "applicationUsers": "Uygulama Kullanıcıları",
+    "name": "İsim",
+    "email": "E-posta",
+    "accountStatus": "Hesap Durumu"
 }

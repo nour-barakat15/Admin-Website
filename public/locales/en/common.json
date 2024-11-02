@@ -27,7 +27,15 @@
     "requests": "Requests",
     "users": "Users",
     "appointments": "Appointments",
-    "tenderNews": "Tender News"
+    "tenderNews": "Tender News",
+    "edit": "Edit",
+    "applicationUsers": "Application Users",
+    "name": "Name",
+    "email": "Email",
+    "accountStatus": "Account Status"
+    
+    
+  
     
         
     
