@@ -1,0 +1,31 @@
+{
+    "welcome": "Hoş Geldiniz!",
+    "letGetStarted": "Hadi Başlayalım",
+    "accessDashboard": "Kişisel panonuza erişin ve her şeyi kolayca yönetin.",
+    "login": "Giriş Yap",
+    "waitingForYou": "Sizi bekliyorduk! Devam etmek için giriş yapın.",
+    "rememberMe": "Beni Hatırla",
+    "forgotPassword": "Şifremi Unuttum",
+    "submit": "Giriş Yap",
+    "emailPlaceholder": "örnek@gmail.com",
+    "passwordPlaceholder": "********",
+
+    "dashboard": "Pano",
+    "totalDepartments": "Toplam Departman",
+    "totalServices": "Toplam Hizmet",
+    "totalUsers": "Toplam Kullanıcı",
+    "totalRequests": "Toplam Talep",
+    "totalReports": "Toplam Rapor",
+    "totalAppointments": "Toplam Randevu",
+
+    "search": "Arama...",
+    "logout": "Çıkış Yap",
+    "overview": "Genel Bakış",
+    "departments": "Departmanlar",
+    "services": "Hizmetler",
+    "reports": "Raporlar",
+    "requests": "Talepler",
+    "users": "Kullanıcılar",
+    "appointments": "Randevular",
+    "tenderNews": "İhale Haberleri"
+}

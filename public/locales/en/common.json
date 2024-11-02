@@ -1,0 +1,35 @@
+{
+    "welcome": "Welcome!",
+    "letGetStarted": "Let’s Get You Started",
+    "accessDashboard": "Access your personalized dashboard and manage everything with ease.",
+    "login": "Sign In",
+    "waitingForYou": "We’ve been waiting for you! Log in to continue.",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot Password?",
+    "submit": "Sign In",
+    "emailPlaceholder": "example@gmail.com",
+    "passwordPlaceholder": "********",
+
+    "dashboard": "Dashboard",
+    "totalDepartments": "Total Departments",
+    "totalServices": "Total Services",
+    "totalUsers": "Total Users",
+    "totalRequests": "Total Requests",
+    "totalReports": "Total Reports",
+    "totalAppointments": "Total Appointments",
+
+    "search": "Search...",
+    "logout": "Log out",
+    "overview": "Overview",
+    "departments": "Departments",
+    "services": "Services",
+    "reports": "Reports",
+    "requests": "Requests",
+    "users": "Users",
+    "appointments": "Appointments",
+    "tenderNews": "Tender News"
+    
+        
+    
+    
+}
