@@ -5,6 +5,7 @@ import { Department, departments } from './types'; // Import types and mock data
 import { styles } from '../../styles/Departments.styles'; // Import styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 const Departments: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState<Record<number, boolean>>({});
@@ -57,9 +58,11 @@ const Departments: React.FC = () => {
                   </button>
                   {isDropdownOpen[dept.id] && (
                     <div style={styles.dropdown}>
-                      <button style={styles.editButton}>
-                        <FontAwesomeIcon icon={faEdit} style={styles.icon} /> Edit
-                      </button>
+                      <Link href="/screens/Departments/modify" passHref>
+                        <button style={styles.editButton}>
+                          <FontAwesomeIcon icon={faEdit} style={styles.icon} /> Edit
+                        </button>
+                      </Link>
                       <button style={styles.deleteButton}>
                         <FontAwesomeIcon icon={faTrashAlt} style={styles.icon} /> Delete
                       </button>

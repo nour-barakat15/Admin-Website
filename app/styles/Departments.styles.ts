@@ -1,9 +1,9 @@
 export const styles = {
     heading: {
-      fontSize: '24px',
+      fontSize: '18px',
       fontWeight: 'bold',
       marginBottom: '5px',
-      marginTop: '60px',
+      marginTop: '80px',
       color: 'black'
     },
     createContainer: {
