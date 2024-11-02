@@ -1,3 +1,5 @@
+// app/components/Sidebar.tsx
+
 "use client"; // Add this directive at the top of the file
 
 import { usePathname } from 'next/navigation'; // Use usePathname instead of useRouter
@@ -8,10 +10,10 @@ const Sidebar = () => {
   const pathname = usePathname(); // Get the current pathname
 
   return (
-    <div className="h-screen w-64 bg-Secondary text-white flex flex-col p-4">
+    <div className="fixed inset-y-0 left-0 h-screen w-64 bg-Secondary text-white flex flex-col p-4 z-40"> {/* Add z-index */}
       {/* Logo Section */}
       <div className="mb-8 flex items-center justify-center">
-        <img src="/logo.png" alt="Streamline Logo" className="h-28" /> {/* Adjust the height as needed */}
+        <img src="/logo.png" alt="Streamline Logo" className="h-28" />
       </div>
       <nav className="flex flex-col flex-grow">
         <Link href="/dashboard">
@@ -63,4 +65,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Sidebar; // This line exports the component

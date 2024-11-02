@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #F6F6F6;
     --foreground: #ededed;
   }
 }
@@ -31,6 +31,31 @@ body {
   padding: 20px;
   background-color: #f0f2f5; /* Adjust the color to match your design */
 }
+/*dDashboard Content used colors*/
+.bg-custom-departments {
+  background-color: #E7E6FB; /* Total Departments */
+}
+
+.bg-custom-services {
+  background-color: #F9E5EA; /* Total Services */
+}
+
+.bg-custom-users {
+  background-color: #DFEDF7; /* Total Users */
+}
+
+.bg-custom-requests {
+  background-color: #FBEDD9; /* Total Requests */
+}
+
+.bg-custom-reports {
+  background-color: #F4C8FF; /* Total Reports */
+}
+
+.bg-custom-appointments {
+  background-color: #BBFFC2; /* Total Appointments */
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

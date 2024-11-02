@@ -15,6 +15,12 @@ module.exports = {
         'Secondary': '#093D56',
         
       },
+      width: {
+        '140': '35rem'
+      }
+      // boxShadow: {
+      //   'custom-lg': '0 10px 30px rgba(0, 0, 0, 1)', // Custom shadow example
+      // },
     },
   },
   plugins: [],

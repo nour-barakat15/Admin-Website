@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Department, departments } from './types'; // Import types and mock data
 import { styles } from '../../styles/Departments.styles'; // Import styles
-import Header from '@/app/components/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -18,56 +17,60 @@ const Departments: React.FC = () => {
     }));
   };
   return (
-    <div style={styles.container}>
-      <Header/>
+    <div>
       <h2 style={styles.heading}>Dashboard &gt; Departments</h2>
-    <div style={styles.tableContainer}>
-      <div style={styles.createContainer}>
-        <button style={styles.createButton}>+ Create</button>
-      </div>
+      <div style={styles.tableContainer}>
+        <div style={styles.createContainer}>
+          <button style={styles.createButton}>+ Create</button>
+        </div>
 
-      <table style={styles.table}>
-        <thead style={styles.tableHeader}>
-          <tr>
-            <th style={styles.tableCell}>ID</th>
-            <th style={styles.tableCell}>Name</th>
-            <th style={styles.tableCell}>Email</th>
-            <th style={styles.tableCell}>Phone</th>
-            <th style={styles.tableCell}>Responsible</th>
-            <th style={styles.tableCell}>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {departments.map((dept: Department) => (
-            <tr key={dept.id} style={styles.tableRow}>
-              <td style={styles.tableCell}>#{dept.id}</td>
-              <td style={styles.tableCell}>{dept.name}</td>
-              <td style={styles.tableCell}>{dept.email}</td>
-              <td style={styles.tableCell}>{dept.phone}</td>
-              <td style={styles.tableCell}>{dept.responsible}</td>
-              <td style={styles.actionMenu}>
-              <button
-                  style={styles.menuButton}
-                  onClick={() => toggleDropdown(dept.id)} // Toggle dropdown
-                >
-                  ...
-                </button>
-                {isDropdownOpen[dept.id] && (
-                  <div style={styles.dropdown}>
-                    <button style={styles.editButton}>
-                      <FontAwesomeIcon icon={faEdit} style={styles.icon} /> Edit
-                    </button>
-                    <button style={styles.deleteButton}>
-                      <FontAwesomeIcon icon={faTrashAlt} style={styles.icon} /> Delete
-                    </button>
-                  </div>
-                )}
-              </td>
+        <table style={styles.table}>
+          <thead style={styles.tableHeader}>
+            <tr>
+              <th style={styles.tableCell}>ID</th>
+              <th style={styles.tableCell}>Name</th>
+              <th style={styles.tableCell}>Email</th>
+              <th style={styles.tableCell}>Phone</th>
+              <th style={styles.tableCell}>Responsible</th>
+              <th style={styles.tableCell}>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {departments.map((dept: Department) => (
+              <tr key={dept.id} style={styles.tableRow}>
+                <td style={styles.tableCell}>#{dept.id}</td>
+                <td style={styles.tableCell}>{dept.name}</td>
+                <td style={styles.tableCell}>{dept.email}</td>
+                <td style={styles.tableCell}>{dept.phone}</td>
+                <td style={styles.tableCell}>
+                  <div style={styles.responsibleContainer}>
+                    <img src={dept.avatar} alt="profile-pic" style={styles.avatar}/>
+                    {dept.responsible}
+                  </div>
+                  </td>
+                <td style={styles.actionMenu}>
+                <button
+                    style={styles.menuButton}
+                    onClick={() => toggleDropdown(dept.id)} // Toggle dropdown
+                  >
+                    ...
+                  </button>
+                  {isDropdownOpen[dept.id] && (
+                    <div style={styles.dropdown}>
+                      <button style={styles.editButton}>
+                        <FontAwesomeIcon icon={faEdit} style={styles.icon} /> Edit
+                      </button>
+                      <button style={styles.deleteButton}>
+                        <FontAwesomeIcon icon={faTrashAlt} style={styles.icon} /> Delete
+                      </button>
+                    </div>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div style={styles.pagination}>
         <button style={styles.paginationButton}>

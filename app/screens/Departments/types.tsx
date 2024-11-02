@@ -5,6 +5,7 @@ export interface Department {
     email: string;
     phone: string;
     responsible: string;
+    avatar: string;
   }
   
   // Mock data for departments 
@@ -15,6 +16,7 @@ export interface Department {
       email: 'hm.mahadijr@gmail.com',
       phone: '+90 533 867 28 37',
       responsible: 'Hassan Mahadjir',
+      avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy1r6Lyo0NJ_YtuCuqcJ0C5aQguHfWa07AYQ&s'
     },
     {
       id: 1233,
@@ -22,5 +24,6 @@ export interface Department {
       email: 'hm.mahadijr@gmail.com',
       phone: '+90 533 867 28 37',
       responsible: 'Hassan Mahadjir',
+      avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy1r6Lyo0NJ_YtuCuqcJ0C5aQguHfWa07AYQ&s'
     },
   ];

@@ -1,34 +1,10 @@
 export const styles = {
-    container: {
-      height: '100%',
-      width: '100%',
-      color: 'black', // Dark gray text color
-      padding: '10px',
-    },
     heading: {
       fontSize: '24px',
       fontWeight: 'bold',
       marginBottom: '5px',
-      marginTop: '45px'
-    },
-    searchIcon: {
-        width: '20px',
-        height: '20px',
-        position: 'absolute' as const,
-        left: '10px',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        pointerEvents: 'none' as 'none', // Prevents the icon from blocking input clicks
-    },
-    searchContainer: {
-        position: 'relative' as const,
-        width: '300px',
-    },
-    searchBar: {
-      padding: '8px',
-      width: '300px',
-      border: '1px solid #ccc',
-      borderRadius: '25px',
+      marginTop: '60px',
+      color: 'black'
     },
     createContainer: {
         display: 'flex',
@@ -69,19 +45,21 @@ export const styles = {
       color: '#4a5568', // Darker gray for text
     },
     actionMenu: {
-      position: 'relative' as const,
+      padding: '12px 16px',
+      textAlign: 'left' as const,
     },
     menuButton: {
       background: 'none',
       border: 'none',
       fontSize: '20px',
       cursor: 'pointer',
+      color: '#4a5568',
     },
     dropdown: {
       display: 'block',
       position: 'absolute' as const,
-      top: '35px',
-      right: '0',
+      top: '275px',
+      right: '5px',
       backgroundColor: 'white',
       borderRadius: '8px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -135,4 +113,14 @@ export const styles = {
     pageNumber: {
       color: '#093D56',
     },
+    avatar: {
+      height: 25,
+      width: 25,
+      borderRadius: 12.5,
+    },
+    responsibleContainer: {
+      display: 'flex',
+      flexDirection: 'row' as 'row',
+      gap: 20
+    }
   };
