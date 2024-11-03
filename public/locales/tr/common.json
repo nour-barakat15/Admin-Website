@@ -64,5 +64,15 @@
     "status": {
         "active": "Actif",
         "inactive": "Inactif"
-    }
+    },
+    "ModifyUser": "Kullanıcıyı Değiştir",
+    "Password": "Şifre",
+    "Address": "Adres",
+    "Gender": "Cinsiyet",
+    "Role": "Rol",
+    "ResponsibleOf": "Sorumlu",
+    "DateOfBirth": "Doğum Tarihi",
+    "RegistrationDate": "Kayıt Tarihi",
+    "Cancel": "İptal",
+    "ChangePassword": "Şifre Değiştir"
 }

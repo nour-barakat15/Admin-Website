@@ -109,7 +109,7 @@ const Users: React.FC = () => {
                   </button>
                   {isDropdownOpen[user.id] && (
                     <div style={styles.dropdown}>
-                      <Link href="/screens/Departments/modify" passHref>
+                      <Link href="/screens/User/modify" passHref>
                         <button style={styles.editButton}>
                           <FontAwesomeIcon icon={faEdit} style={styles.icon} /> {Edit}
                         </button>

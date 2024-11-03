@@ -64,7 +64,17 @@
     "status": {
         "active": "Active",
         "inactive": "Inactive"
-    }
+    },
+    "ModifyUser": "Modify User",
+    "Password": "Password",
+    "Address": "Address",
+    "Gender": "Gender",
+    "Role": "Role",
+    "ResponsibleOf": "Responsible Of",
+    "DateOfBirth": "Date of Birth",
+    "RegistrationDate": "Registration Date",
+    "Cancel": "Cancel",
+    "ChangePassword": "Change Password"
   
     
         
