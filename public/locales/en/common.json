@@ -54,7 +54,17 @@
     "Services": "Services",
     "Save": "Save",
     "BusServices": "Bus Services",
-    "LaunchedOn": "Launched on"
+    "LaunchedOn": "Launched on",
+    "user": "User",
+    "Staff": "Staff",
+    "Admin": "Admin",
+    "FirstName": "First Name",
+    "LastName": "Last Name",
+    "Status": "Status",
+    "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+    }
   
     
         

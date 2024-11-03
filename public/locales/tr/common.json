@@ -54,5 +54,15 @@
     "Services": "Hizmetler",
     "Save": "Kaydet",
     "BusServices": "Otobüs Hizmetleri",
-    "LaunchedOn": "Başlangıç Tarihi"
+    "LaunchedOn": "Başlangıç Tarihi",
+    "user": "Kullanıcı",
+    "Staff": "Personel",
+    "Admin": "Yönetici",
+    "FirstName": "İsim",
+    "LastName": "Soyisim",
+    "Status": "Durum",
+    "status": {
+        "active": "Actif",
+        "inactive": "Inactif"
+    }
 }

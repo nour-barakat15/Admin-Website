@@ -32,11 +32,11 @@ const Sidebar = () => {
       <nav className="flex flex-col flex-grow overflow-y-auto"> {/* Added overflow-y-auto for scrolling */}
         {[ // Sidebar Links
           { href: "/dashboard", icon: <FaHome className="mr-3 text-xl" />, label: overviewLabel }, // Translated
-          { href: "/departments", icon: <FaBuilding className="mr-3 text-xl" />, label: departmentsLabel }, // Translated
+          { href: "/screens/Departments", icon: <FaBuilding className="mr-3 text-xl" />, label: departmentsLabel }, // Translated
           { href: "/services", icon: <FaWrench className="mr-3 text-xl" />, label: servicesLabel }, // Translated
           { href: "/reports", icon: <FaChartLine className="mr-3 text-xl" />, label: reportsLabel }, // Translated
           { href: "/requests", icon: <FaEnvelopeOpenText className="mr-3 text-xl" />, label: requestsLabel }, // Translated
-          { href: "/users", icon: <FaUserFriends className="mr-3 text-xl" />, label: usersLabel }, // Translated
+          { href: "/screens/User", icon: <FaUserFriends className="mr-3 text-xl" />, label: usersLabel }, // Translated
           { href: "/appointments", icon: <FaCalendarAlt className="mr-3 text-xl" />, label: appointmentsLabel }, // Translated
           { href: "/training-news", icon: <FaNewspaper className="mr-3 text-xl" />, label: tenderNewsLabel }, // Translated
         ].map(({ href, icon, label }) => (

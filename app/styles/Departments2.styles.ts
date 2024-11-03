@@ -3,7 +3,7 @@ export const styles = {
       fontSize: '16px',
       fontWeight: 'bold',
       marginBottom: '5px',
-      marginTop: '60px',
+      marginTop: '30px',
       color: 'black'
     },
     maincontainer: {
