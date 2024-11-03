@@ -1,14 +1,23 @@
 // app/components/Navbar.tsx
 
-import React from "react";
+import React, { useState } from "react";
 import { FaGlobe, FaMoon, FaSun, FaSearch } from 'react-icons/fa'; // Import necessary icons
+import { useTranslation } from 'next-i18next'; // Import useTranslation
+import i18next from 'i18next'; // Import i18next
 
 function Navbar() {
-  const [isDarkMode, setIsDarkMode] = React.useState(false); // State for theme toggle
+  const { t } = useTranslation("common"); // Use the correct namespace for translations
+  const [isDarkMode, setIsDarkMode] = useState(false); // State for theme toggle
+  const [currentLanguage, setCurrentLanguage] = useState('en'); // State for current language
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
     // Here you would also add logic to change the theme of your application
+  };
+
+  const changeLanguage = (lang: string) => { // Explicitly declare lang as a string
+    i18next.changeLanguage(lang); // Change the language using i18next
+    setCurrentLanguage(lang); // Update the current language state
   };
 
   return (
@@ -18,7 +27,7 @@ function Navbar() {
         <FaSearch className="absolute left-3 top-3 text-black" />
         <input
           type="text"
-          placeholder="Search..."
+          placeholder={t('search')} // Translated placeholder
           className="w-full pl-9 pr-4 py-2 border border-Secondary rounded-full shadow-sm focus:outline-none focus:ring-Primary focus:border-Primary placeholder-black text-black"
         />
       </div>
@@ -38,7 +47,10 @@ function Navbar() {
         </button>
 
         {/* Language Icon */}
-        <button className="p-3 rounded-full hover:bg-gray-200 focus:outline-none">
+        <button 
+          className="p-3 rounded-full hover:bg-gray-200 focus:outline-none"
+          onClick={() => changeLanguage(currentLanguage === 'en' ? 'tr' : 'en')} // Toggle between English and Turkish
+        >
           <FaGlobe className="text-black text-xl" /> {/* Globe icon in black */}
         </button>
 
@@ -51,4 +63,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar; // This line exports the component

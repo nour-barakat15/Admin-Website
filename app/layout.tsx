@@ -6,16 +6,23 @@ import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar'; 
 import './global.css'; 
 import { usePathname } from 'next/navigation'; 
-import { ReactNode } from 'react'; 
+import { ReactNode, useEffect } from 'react'; 
+import { useTranslation } from 'next-i18next'; 
+import i18n from '../i18'; // Import the i18n initialization
 
 interface LayoutProps {
   children: ReactNode; 
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const pathname = usePathname(); // Get the current pathname
+  const pathname = usePathname(); 
+  const { t } = useTranslation('common'); 
 
-  // Define pages where Sidebar and Navbar should not appear
+  useEffect(() => {
+    // Initialize i18next
+    i18n.init();
+  }, []);
+
   const noSidebarPaths = ['/screens/login'];
 
   return (
@@ -23,9 +30,10 @@ const Layout = ({ children }: LayoutProps) => {
       <body>
         <div className="flex">
           {!noSidebarPaths.includes(pathname) && <Sidebar />}
-          <main className={`flex-grow flex flex-col ${!noSidebarPaths.includes(pathname) ? 'ml-64' : ''}`}> {/* Adjust margin based on presence of Sidebar */}
+          <main className={`flex-grow flex flex-col ${!noSidebarPaths.includes(pathname) ? 'ml-64' : ''}`}>
             {!noSidebarPaths.includes(pathname) && <Navbar />}
             <div className="main-content flex-grow p-4">
+              <h1 className="text-2xl font-bold">{t('welcome')}</h1>
               {children}
             </div>
           </main>
