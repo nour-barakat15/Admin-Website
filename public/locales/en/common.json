@@ -32,9 +32,29 @@
     "applicationUsers": "Application Users",
     "name": "Name",
     "email": "Email",
-    "accountStatus": "Account Status"
+    "accountStatus": "Account Status",
     
-    
+    "Dashboard" : "Dashbaord",
+    "Departments" : "Departments",
+    "Create" : "Create", 
+    "Name" : "Name",
+    "Email" : "Email",
+    "Phone" : "Phone",
+    "Responsible" :"Responsible",
+    "Action" : "Action",
+    "Edit" : "Edit", 
+    "Delete" : "Delete",
+    "Previous" : "Previous",
+    "Next" : "Next",
+    "Page" : "Page",
+    "ModifyDepartment": "Modify Department",
+    "DepartmentName": "Department Name",
+    "Description": "Description",
+    "Phone Number": "Phone Number",
+    "Services": "Services",
+    "Save": "Save",
+    "BusServices": "Bus Services",
+    "LaunchedOn": "Launched on"
   
     
         

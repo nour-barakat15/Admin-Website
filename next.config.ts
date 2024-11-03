@@ -1,17 +1,14 @@
-// next.config.ts
 import type { NextConfig } from "next";
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   images: {
     domains: ['th.bing.com'],
   },
-const { i18n } = require('./next-i18next.config');
-const nextConfig: NextConfig = {
-    i18n: {
-        defaultLocale: 'en',
-        locales: ['en', 'tr'], // Add your supported languages here
-    },
-    // Other config options can be added here
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'tr'], 
+  },
+
 };
 
 export default nextConfig;

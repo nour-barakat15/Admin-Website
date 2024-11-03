@@ -32,5 +32,27 @@
     "applicationUsers": "Uygulama Kullanıcıları",
     "name": "İsim",
     "email": "E-posta",
-    "accountStatus": "Hesap Durumu"
+    "accountStatus": "Hesap Durumu",
+
+    "Dashboard" : "Gösterge Paneli",
+    "Departments" : "Departmanlar",
+    "Create" : "Oluştur",
+    "Name" : "İsim",
+    "Email" : "E-posta",
+    "Phone" : "Telefon",
+    "Responsible" : "Sorumlu",
+    "Action" : "Eylem",
+    "Edit" : "Düzenle",
+    "Delete" : "Sil",
+    "Previous" : "Önceki",
+    "Next" : "Sonraki",
+    "Page" : "Sayfa",
+    "ModifyDepartment": "Departmanı Düzenle",
+    "DepartmentName": "Departman Adı",
+    "Description": "Açıklama",
+    "Phone Number": "Telefon Numarası",
+    "Services": "Hizmetler",
+    "Save": "Kaydet",
+    "BusServices": "Otobüs Hizmetleri",
+    "LaunchedOn": "Başlangıç Tarihi"
 }

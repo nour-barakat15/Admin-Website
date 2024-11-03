@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { styles } from '../../../styles/Departments2.styles';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { useTranslation } from "next-i18next";
 
 const Select = dynamic(() => import('react-select'), {ssr:false});
 
@@ -23,6 +24,23 @@ type ResponsibleOption = {
 };
 
 const ModifyDepartment = () => {
+    const { t } = useTranslation("common"); 
+
+    // Constants for translated text
+    const Dashboard = t('Dashbaord');
+    const Departments = t('Departments');
+    const ModifyDepartment = t('ModifyDepartment'); 
+    const DepartmentName = t('DepartmentName');
+    const Email = t('Email');
+    const Description = t('Description');
+    const Responsible = t('Responsible');
+    const PhoneNumber = t('PhoneNumber');
+    const Edit = t('Edit'); 
+    const Save = t('Save');
+    const Services = t('Services');
+    const BusServices = t('BusServices');
+    const LaunchedOn = t('LaunchedOn')
+
     const [selectedResponsible, setSelectedResponsible] = useState<ResponsibleOption | null>(responsibleOptions[0]);
 
     // Custom option renderer for Select component
@@ -49,23 +67,23 @@ const ModifyDepartment = () => {
 
     return(
         <div>
-            <h2 style={styles.heading}>Dashboard &gt; Departments &gt; Modify Department</h2>
+            <h2 style={styles.heading}>{Dashboard} &gt; {Departments} &gt; {ModifyDepartment}</h2>
             <div style={styles.maincontainer}>
                 <div style={{display: 'flex', flexDirection: 'row' as 'row'}}>
                     <div style={styles.formSection}>
-                        <label>Department Name</label>
+                        <label>{DepartmentName}</label>
                         <input type="text" style={styles.input}/>
 
-                        <label style={{marginTop: '8px'}}>Description</label>
+                        <label style={{marginTop: '8px'}}>{Description}</label>
                         <textarea style={styles.textarea}/>
 
-                        <label style={{marginTop: '8px'}}>Email</label>
+                        <label style={{marginTop: '8px'}}>{Email}</label>
                         <input type="text" style={styles.input}/>
 
-                        <label style={{marginTop: '8px'}}>Phone Number</label>
+                        <label style={{marginTop: '8px'}}>{PhoneNumber}</label>
                         <input type="text" style={styles.input}/>
 
-                        <label style={{marginTop: '8px'}}>Responsible</label>
+                        <label style={{marginTop: '8px'}}>{Responsible}</label>
                         <div style={styles.dropdownContainer}>
                             <Select
                                 value={selectedResponsible}
@@ -95,24 +113,24 @@ const ModifyDepartment = () => {
                     </div>
 
                     <div style={styles.servicesSection}>
-                        <h3 style={styles.servicesHeading}>Services</h3>
+                        <h3 style={styles.servicesHeading}>{Services}</h3>
                         {[...Array(2)].map((_, i) => (
                             <div key={i} style={styles.serviceCard}>
                                 <div style={styles.serviceImage}>
                                     <img src="https://www.pngitem.com/pimgs/m/555-5552616_transparent-bus-icon-png-icon-blue-bus-png.png" alt=""/>
                                 </div>
                                 <div>
-                                    <p style={styles.serviceTitle}>Bus Services</p>
-                                    <p style={styles.serviceDate}>Launched on 10/10/2024</p>
+                                    <p style={styles.serviceTitle}>{BusServices}</p>
+                                    <p style={styles.serviceDate}>{LaunchedOn} 10/10/2024</p>
                                 </div>
-                                <button style={styles.editButton}>Edit</button>
+                                <button style={styles.editButton}>{Edit}</button>
                             </div>
                         ))}
                     </div>
                 </div>
                 <Link href="/screens/Departments" passHref>
                     <div style={styles.saveContainer}>
-                        <button style={styles.saveButton}>Save</button>
+                        <button style={styles.saveButton}>{Save}</button>
                     </div>
                 </Link>
             </div>

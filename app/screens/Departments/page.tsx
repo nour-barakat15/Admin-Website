@@ -6,8 +6,26 @@ import { styles } from '../../styles/Departments.styles'; // Import styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { useTranslation } from "next-i18next";
 
 const Departments: React.FC = () => {
+  const { t } = useTranslation("common"); 
+
+  // Constants for translated text
+  const Dashboard = t('Dashbaord');
+  const Departments = t('Departments');
+  const Create = t('Create'); 
+  const Name = t('Name');
+  const Email = t('Email');
+  const Phone = t('Phone');
+  const Responsible = t('Responsible');
+  const Action = t('Action');
+  const Edit = t('Edit'); 
+  const Delete = t('Delete');
+  const Previous = t('Previous');
+  const Next = t('Next');
+  const Page = t('Page')
+
   const [isDropdownOpen, setIsDropdownOpen] = useState<Record<number, boolean>>({});
 
   // Toggle dropdown for a specific row
@@ -19,21 +37,21 @@ const Departments: React.FC = () => {
   };
   return (
     <div>
-      <h2 style={styles.heading}>Dashboard &gt; Departments</h2>
+      <h2 style={styles.heading}>{Dashboard} &gt; {Departments}</h2>
       <div style={styles.tableContainer}>
         <div style={styles.createContainer}>
-          <button style={styles.createButton}>+ Create</button>
+          <button style={styles.createButton}>+ {Create}</button>
         </div>
 
         <table style={styles.table}>
           <thead style={styles.tableHeader}>
             <tr>
               <th style={styles.tableCell}>ID</th>
-              <th style={styles.tableCell}>Name</th>
-              <th style={styles.tableCell}>Email</th>
-              <th style={styles.tableCell}>Phone</th>
-              <th style={styles.tableCell}>Responsible</th>
-              <th style={styles.tableCell}>Action</th>
+              <th style={styles.tableCell}>{Name}</th>
+              <th style={styles.tableCell}>{Email}</th>
+              <th style={styles.tableCell}>{Phone}</th>
+              <th style={styles.tableCell}>{Responsible}</th>
+              <th style={styles.tableCell}>{Action}</th>
             </tr>
           </thead>
           <tbody>
@@ -60,11 +78,11 @@ const Departments: React.FC = () => {
                     <div style={styles.dropdown}>
                       <Link href="/screens/Departments/modify" passHref>
                         <button style={styles.editButton}>
-                          <FontAwesomeIcon icon={faEdit} style={styles.icon} /> Edit
+                          <FontAwesomeIcon icon={faEdit} style={styles.icon} /> {Edit}
                         </button>
                       </Link>
                       <button style={styles.deleteButton}>
-                        <FontAwesomeIcon icon={faTrashAlt} style={styles.icon} /> Delete
+                        <FontAwesomeIcon icon={faTrashAlt} style={styles.icon} /> {Delete}
                       </button>
                     </div>
                   )}
@@ -78,11 +96,11 @@ const Departments: React.FC = () => {
       <div style={styles.pagination}>
         <button style={styles.paginationButton}>
           <FontAwesomeIcon icon={faArrowLeft} size="lg" style={{ marginRight: '8px', color: '#093D56'}} />
-          <span>Previous</span>
+          <span>{Previous}</span>
         </button>
-        <span style={styles.pageNumber}>Page 1 of 2</span>
+        <span style={styles.pageNumber}>{Page} 1 of 2</span>
         <button style={styles.paginationButton}>
-          <span>Next</span>
+          <span>{Next}</span>
           <FontAwesomeIcon icon={faArrowRight} size="lg" style={{ marginLeft: '8px', color: '#093D56' }}
           />
         </button>
